@@ -13,10 +13,9 @@ export default async function Page() {
   const data = await getStaticData();
 
   return (
-    <main>
-      <h1>SSG Page (Cached)</h1>
-      <p>Product Name: {data.title}</p>
-      <p>Price: ${data.price}</p>
-    </main>
+    <div>
+      <h1>SSG in App Router</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
   );
 }
